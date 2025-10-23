@@ -35,8 +35,3 @@ The pipeline is organized into five stages:
 4. **Response Generation**  
    The query and retrieved texts are combined and sent to the **LLaMA 3.1 8B Instant** model (via the Groq API).  
    The model is instructed to answer **only** using the provided context.
-
-
-
-Question: {query}
-"""
