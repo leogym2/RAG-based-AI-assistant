@@ -12,7 +12,7 @@ The workflow extracts text from a document, generates embeddings, stores them in
 </p>
 
 <p align="center">
-  <img src="images/embeddings_" alt="Retrieval and LLM interaction" width="750"/>
+  <img src="images/embeddings_.png" alt="Retrieval and LLM interaction" width="750"/>
 </p>
 
 ---
