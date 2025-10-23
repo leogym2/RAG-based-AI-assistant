@@ -21,8 +21,6 @@ When a user asks a question (e.g., *“What does the warning light for oil press
 
 ---
 
-## Overview
-
 ## Pipeline Description
 
 The pipeline is organized into five main stages:
