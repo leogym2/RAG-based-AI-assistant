@@ -3,6 +3,10 @@
 This repository implements a lightweight **Retrieval-Augmented Generation (RAG)** system designed to answer questions based on the content of a PDF document.  
 The workflow extracts text from a document, generates embeddings, stores them in a vector database, retrieves the most relevant chunks for a user query, and uses an LLM to produce an informed answer.
 
+As a practical use case, the pipeline was tested on the **Ferrari 458 Italia Owner’s Manual**, enabling natural-language queries about the car’s technical specifications, components, and maintenance procedures.
+When a user asks a question (e.g., *“What does the warning light for oil pressure mean?”*), the system retrieves the most relevant sections of the manual and uses a **Large Language Model (LLaMA 3.1 8B Instant)** to generate a concise and context-grounded answer.
+
+
 ---
 
 ## Schema
