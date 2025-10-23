@@ -8,11 +8,11 @@ The workflow extracts text from a document, generates embeddings, stores them in
 ## Schema
 
 <p align="center">
-  <img src="images/embeddings_.png" alt="Embedding creation process" width="750"/>
+  <img src="images/embeddings.png" alt="Embedding creation process" width="750"/>
 </p>
 
 <p align="center">
-  <img src="images/retrival.png" alt="Retrieval and LLM interaction" width="750"/>
+  <img src="images/embeddings_" alt="Retrieval and LLM interaction" width="750"/>
 </p>
 
 ---
