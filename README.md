@@ -35,16 +35,15 @@ The pipeline is organized into five main stages:
    All embeddings and their associated text chunks are stored in a persistent **ChromaDB** collection, allowing the data to be efficiently retrieved and reused without recomputing embeddings.
 
 3. **Retrieval**  
-   When a user submits a query (for example, *“Which is the main take away of the paper?”*), the query is encoded into an embedding using the same SentenceTransformer model.  
+   When a user submits a query, the query is encoded into an embedding using the same SentenceTransformer model.  
    The system compares this query embedding against the stored embeddings in ChromaDB using cosine similarity to identify the **three most semantically relevant text chunks**.  
    These retrieved chunks serve as the contextual foundation for the next step, ensuring that the final answer is derived directly from the source document.
 
 4. **Response Generation**  
    The selected chunks and the original query are merged into a structured prompt that instructs the model to answer strictly based on the retrieved context.  
-   This prompt is sent to the **LLaMA 3.1 8B Instant** model via the **Groq API**, which generates a concise and context-grounded answer.  
-   The LLM is guided by a system message (“You are a precise AI researcher.”) to maintain factual accuracy and clarity, minimizing hallucinations and irrelevant information.
-
-5. **Output Interpretation**  
+   This prompt is sent to the **LLaMA 3.1 8B Instant** model via the **Groq API**, which generates a concise and context-grounded answer.
+   
+6. **Output Interpretation**  
    The generated response is presented as the final system output.  
    Since the answer is derived exclusively from the retrieved context, it reflects the actual contents of the source PDF, making the system suitable for document-based question answering and information retrieval tasks.
 
